@@ -21,6 +21,15 @@ public class City {
 		System.out.println(
 				"Nom: "+ this.name+" "+"Nombre d'habitants "+this.habitants+".");
 	}
+	
+	public void setHabitants(int nombre) {
+		if (nombre > habitants) {
+			this.habitants = nombre;
+			System.out.println("La population de : "+this.name+" est désormait de: "+this.habitants+" habitants.");
+		} else {
+			System.out.println("La ville de: "+this.name+" continue de s'agrandir, sa population ne peut pas baisser");
+		}
+	}
 	/*
 	public static void main(String[] args) {
 		City toulouse = new City("Toulouse", 450000);
