@@ -45,6 +45,14 @@ public class City {
 			System.out.println("La ville: "+this.name+". Est déjà dans un pays: "+this.country+".");
 		}
 	}
+	public void addHabitants(int nombre) {
+		if (nombre >0) {
+			this.habitants += nombre;
+			System.out.println("La ville: "+this.name+". a vu sa population augmenter de: "+nombre+" sa population est désormait de: "+this.habitants+".");
+		} else {
+			System.out.println("La valeur doit être positive");
+		}
+	}
 	/*
 	public static void main(String[] args) {
 		City toulouse = new City("Toulouse", 450000);
