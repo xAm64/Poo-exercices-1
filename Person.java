@@ -6,8 +6,16 @@ public class Person {
 	private String prenom;
 	private int age;
 	private String adresse;
+	private City cityBirth;
 	
 	//constructeur
+	public Person (String nom, String prenom, int age, String adress, City city) {
+		this.nom = nom;
+		this.prenom = prenom;
+		this.age = age;
+		this.adresse = adress;
+		this.cityBirth = city;
+	}
 	public Person (String nom, String prenom, int age, String adress) {
 		this.nom = nom;
 		this.prenom = prenom;
@@ -34,8 +42,11 @@ public class Person {
 		if (this.age > 0) {
 			x += this.age+" ans, ";
 		}
-		if (!this.adresse.equals("")) {
-			x += this.adresse;
+		if (this.adresse != "") {
+			x += this.adresse+", ";
+		}
+		if (cityBirth != null) {
+			x += "Ville de naissance: "+cityBirth.getCity()+" "+cityBirth.getCountry()+". ";
 		}
 		return x;
 	}

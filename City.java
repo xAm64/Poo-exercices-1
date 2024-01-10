@@ -19,6 +19,11 @@ public class City {
 		this.country = country;
 		this.habitants = population;
 	}
+	public City(String name, String country) {
+		this.name = name;
+		this.country = country;
+		this.habitants = MIN_HABITANTS;
+	}
 	public City(String name, int population) {
 		this.name = name;
 		this.country = "unknow";
@@ -40,6 +45,12 @@ public class City {
 	//getters
 	public int countCity() {
 		return numberInstances;
+	}
+	public String getCity() {
+		return this.name;
+	}
+	public String getCountry() {
+		return this.country;
 	}
 	
 	//setters
