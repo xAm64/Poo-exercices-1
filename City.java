@@ -52,6 +52,9 @@ public class City {
 	public String getCountry() {
 		return this.country;
 	}
+	public int getHabitants() {
+		return this.habitants;
+	}
 	
 	//setters
 	public void setHabitants(int nombre) {

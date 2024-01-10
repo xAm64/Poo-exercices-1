@@ -35,18 +35,30 @@ public class Person {
 		this.adresse = "";
 	}
 	
+	//getters
+	public String getAdress() {
+		return this.adresse;
+	}
+	public String getBirthCountry() {
+		return cityBirth.getCountry();
+	}
+
+	
 	//Écrire valeurs
 	@Override
 	public String toString() {
-		String x = "nom: "+this.nom+", prénom: "+this.prenom+", ";
+		String x = "nom: "+this.nom+", prénom: "+this.prenom;
 		if (this.age > 0) {
-			x += this.age+" ans, ";
+			x += ", "+this.age+" ans";
 		}
 		if (this.adresse != "") {
-			x += this.adresse+", ";
+			x += ", "+this.adresse;
 		}
 		if (cityBirth != null) {
-			x += "Ville de naissance: "+cityBirth.getCity()+" "+cityBirth.getCountry()+". ";
+			x += ", Ville de naissance: "+cityBirth.getCity()+" "+cityBirth.getCountry();
+			if (cityBirth.getHabitants() > 0) {
+				x += " "+cityBirth.getHabitants()+" habitants";
+			}
 		}
 		return x;
 	}
