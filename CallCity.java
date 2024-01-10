@@ -12,5 +12,7 @@ public class CallCity {
 		
 		toulouse.view();
 		bayonne.view();
+		System.out.println(toulouse);
+		System.out.println("il y a: "+toulouse.countCity());
 	}
 }

@@ -8,7 +8,11 @@ public class City {
 	private String name;
 	private String country;
 	private int habitants;
+	private static int numberInstances = 0;
 	final int MIN_HABITANTS = 0;
+	{
+		numberInstances ++;
+	}
 	//constructeurs
 	public City(String name, String country, int population) {
 		this.name = name;
@@ -24,10 +28,20 @@ public class City {
 		this.name = name;
 	}
 	
+	//afficher ville
 	public void view() {
 		System.out.println(
 				"Nom: "+ this.name+" "+"Nombre d'habitants "+this.habitants+".");
 	}
+	@Override
+	public String toString() {
+		return "Ville de :"+this.name+" en "+this.country+" ayant "+this.habitants+" habitants";
+	}
+	//getters
+	public int countCity() {
+		return numberInstances;
+	}
+	
 	//setters
 	public void setHabitants(int nombre) {
 		if (nombre > habitants) {
